@@ -6,3 +6,4 @@
 /laravel-echo-server.lock
 /laravel-echo-server.json
 /demo/node_modules
+php/laravel-echo-demo/.editorconfig
