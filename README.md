@@ -1,6 +1,6 @@
 # Laravel Echo Server
 
-[![GoDoc](https://pkg.go.dev/badge/github.com/larisgo/laravel-echo-server?utm_source=godoc)](https://pkg.go.dev/github.com/larisgo/laravel-echo-server)
+[![GoDoc](https://pkg.go.dev/badge/github.com/ijoywan/laravel-echo-server?utm_source=godoc)](https://pkg.go.dev/github.com/ijoywan/laravel-echo-server)
 
 Golang server for Laravel Echo broadcasting with [Socket.io for golang](https://github.com/zishang520/socket.io).
 
@@ -19,7 +19,7 @@ official docs: <https://laravel.com/docs/master/broadcasting>
 Compile with the following command:
 
 ``` shell
-$   git clone https://github.com/larisgo/laravel-echo-server.git
+$   git clone https://github.com/ijoywan/laravel-echo-server.git
 $   cd laravel-echo-server/
 $   make all
 
@@ -95,7 +95,7 @@ Edit the default configuration of the server by adding options to your **laravel
 | `sslKeyPath`       | `''`                 | The path to your server's ssl key |
 | `sslCertChainPath` | `''`                 | The path to your server's ssl certificate chain |
 | `sslPassphrase`    | `''`                 | The pass phrase to use for the certificate (if applicable) |
-| `socketio`         | `{}`                 | Options to pass to the socket.io instance ([available options](https://github.com/larisgo/laravel-echo-server/blob/master/options/server-options.go)) |
+| `socketio`         | `{}`                 | Options to pass to the socket.io instance ([available options](https://github.com/ijoywan/laravel-echo-server/blob/master/options/server-options.go)) |
 | `subscribers`      | `{"http": true, "redis": true}` | Allows to disable subscribers individually. Available subscribers: `http` and `redis` |
 
 ### DotEnv

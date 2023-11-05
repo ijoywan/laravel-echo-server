@@ -13,13 +13,13 @@ deps:
 	go mod vendor -v
 
 fmt:
-	go fmt -mod=mod github.com/larisgo/laravel-echo-server/...
+	go fmt -mod=mod github.com/ijoywan/laravel-echo-server/...
 
 static-server:
-	CGO_ENABLED=0 go install --tags '$(BUILDTAGS)' -ldflags '-s -w -extldflags "-static"' -mod=mod github.com/larisgo/laravel-echo-server/main/laravel-echo-server
+	CGO_ENABLED=0 go install --tags '$(BUILDTAGS)' -ldflags '-s -w -extldflags "-static"' -mod=mod github.com/ijoywan/laravel-echo-server/main/laravel-echo-server
 
 server:
-	go install --tags '$(BUILDTAGS)' -ldflags '-s -w' -mod=mod github.com/larisgo/laravel-echo-server/main/laravel-echo-server
+	go install --tags '$(BUILDTAGS)' -ldflags '-s -w' -mod=mod github.com/ijoywan/laravel-echo-server/main/laravel-echo-server
 
 release: BUILDTAGS=release
 
@@ -30,8 +30,8 @@ all: fmt server
 static-all: fmt static-server
 
 clean:
-	go clean -mod=mod -r github.com/larisgo/laravel-echo-server/...
+	go clean -mod=mod -r github.com/ijoywan/laravel-echo-server/...
 
 run:
-	GOOS="" GOARCH="" go install -mod=mod github.com/larisgo/laravel-echo-server/main/laravel-echo-server
+	GOOS="" GOARCH="" go install -mod=mod github.com/ijoywan/laravel-echo-server/main/laravel-echo-server
 	vendor/bin/laravel-echo-server

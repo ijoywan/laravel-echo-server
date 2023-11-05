@@ -2,18 +2,19 @@ package api
 
 import (
 	"encoding/json"
-	"github.com/julienschmidt/httprouter"
-	"github.com/larisgo/laravel-echo-server/channels"
-	"github.com/larisgo/laravel-echo-server/express"
-	"github.com/larisgo/laravel-echo-server/options"
-	"github.com/zishang520/engine.io/types"
-	"github.com/zishang520/engine.io/utils"
-	"github.com/zishang520/socket.io/socket"
 	"io"
 	"net/http"
 	"runtime"
 	"strings"
 	"time"
+
+	"github.com/ijoywan/laravel-echo-server/channels"
+	"github.com/ijoywan/laravel-echo-server/express"
+	"github.com/ijoywan/laravel-echo-server/options"
+	"github.com/julienschmidt/httprouter"
+	"github.com/zishang520/engine.io/types"
+	"github.com/zishang520/engine.io/utils"
+	"github.com/zishang520/socket.io/socket"
 )
 
 var startTime time.Time
@@ -109,9 +110,7 @@ func (api *HttpApi) GetChannels(w http.ResponseWriter, r *http.Request, _ httpro
 	prefix := r.URL.Query().Get("filter_by_prefix")
 	rooms := api.io.Sockets().Adapter().Rooms()
 	channels := map[socket.Room]map[string]interface{}{}
-	rooms.Range(func(channelName, sockets interface{}) bool {
-		cn := channelName.(socket.Room)
-		ss := sockets.(*types.Set[socket.SocketId])
+	rooms.Range(func(cn socket.Room, ss *types.Set[socket.SocketId]) bool {
 		if ss.Has(socket.SocketId(cn)) {
 			return true
 		}
@@ -146,7 +145,7 @@ func (api *HttpApi) GetChannel(w http.ResponseWriter, r *http.Request, router ht
 	channelName := router.ByName("channelName")
 	subscriptionCount := 0
 	if sockets, ok := api.io.Sockets().Adapter().Rooms().Load(socket.Room(channelName)); ok {
-		subscriptionCount = sockets.(*types.Set[socket.SocketId]).Len()
+		subscriptionCount = sockets.Len()
 	}
 	result := map[string]interface{}{
 		"subscription_count": subscriptionCount,

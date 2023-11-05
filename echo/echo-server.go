@@ -1,17 +1,18 @@
 package echo
 
 import (
-	"github.com/larisgo/laravel-echo-server/api"
-	"github.com/larisgo/laravel-echo-server/channels"
-	"github.com/larisgo/laravel-echo-server/options"
-	"github.com/larisgo/laravel-echo-server/server"
-	"github.com/larisgo/laravel-echo-server/subscribers"
-	"github.com/larisgo/laravel-echo-server/types"
-	_utils "github.com/larisgo/laravel-echo-server/utils"
+	"sync"
+
+	"github.com/ijoywan/laravel-echo-server/api"
+	"github.com/ijoywan/laravel-echo-server/channels"
+	"github.com/ijoywan/laravel-echo-server/options"
+	"github.com/ijoywan/laravel-echo-server/server"
+	"github.com/ijoywan/laravel-echo-server/subscribers"
+	"github.com/ijoywan/laravel-echo-server/types"
+	_utils "github.com/ijoywan/laravel-echo-server/utils"
 	"github.com/mitchellh/mapstructure"
 	"github.com/zishang520/engine.io/utils"
 	"github.com/zishang520/socket.io/socket"
-	"sync"
 )
 
 type EchoServer struct {
@@ -175,7 +176,7 @@ func (ec *EchoServer) Listen() {
 // Return a channel by its socket id.
 func (ec *EchoServer) Find(id string) *socket.Socket {
 	if _socket, ok := ec.server.Io.Sockets().Sockets().Load(socket.SocketId(id)); ok {
-		return _socket.(*socket.Socket)
+		return _socket
 	}
 	return nil
 }

@@ -32,16 +32,16 @@ if /i "%BUILDTAGS%"=="" (Set BUILDTAGS=release)
     GOTO :EOF
 
 :fmt
-    CALL go fmt -mod=mod github.com/larisgo/laravel-echo-server/...
+    CALL go fmt -mod=mod github.com/ijoywan/laravel-echo-server/...
     GOTO :EOF
 
 :static-server
     Set CGO_ENABLED=0
-    CALL go install --tags "%BUILDTAGS%" -ldflags "-s -w -extldflags ""-static""" -mod=mod github.com/larisgo/laravel-echo-server/main/laravel-echo-server
+    CALL go install --tags "%BUILDTAGS%" -ldflags "-s -w -extldflags ""-static""" -mod=mod github.com/ijoywan/laravel-echo-server/main/laravel-echo-server
     GOTO :EOF
 
 :server
-    CALL go install --tags "%BUILDTAGS%" -ldflags "-s -w" -mod=mod github.com/larisgo/laravel-echo-server/main/laravel-echo-server
+    CALL go install --tags "%BUILDTAGS%" -ldflags "-s -w" -mod=mod github.com/ijoywan/laravel-echo-server/main/laravel-echo-server
     GOTO :EOF
 
 :release
@@ -71,10 +71,10 @@ if /i "%BUILDTAGS%"=="" (Set BUILDTAGS=release)
     GOTO :EOF
 
 :clean
-    CALL go clean -mod=mod -r github.com/larisgo/laravel-echo-server/...
+    CALL go clean -mod=mod -r github.com/ijoywan/laravel-echo-server/...
 
 :run
     Set GOOS=
     Set GOARCH=
-    CALL go install -mod=mod github.com/larisgo/laravel-echo-server/main/laravel-echo-server
+    CALL go install -mod=mod github.com/ijoywan/laravel-echo-server/main/laravel-echo-server
     CALL "vendor\bin\laravel-echo-server.exe"

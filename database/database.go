@@ -2,7 +2,8 @@ package database
 
 import (
 	"errors"
-	"github.com/larisgo/laravel-echo-server/options"
+
+	"github.com/ijoywan/laravel-echo-server/options"
 )
 
 // Create a new database instance.
