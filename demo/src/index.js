@@ -18,7 +18,7 @@ window.Echo.private(`user.1`)
         console.log('private',e);
     });
 
-setInterval(function () {
-  console.log(1);
-  window.Echo.connector.socket.emit('EVENT_NAME', 'message', {'data':'33333'});
-}, 5000);
+// setInterval(function () {
+//   console.log(1);
+//   window.Echo.connector.socket.emit('EVENT_NAME', 'message', {'data':'33333'});
+// }, 5000);
