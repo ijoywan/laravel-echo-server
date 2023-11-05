@@ -4,8 +4,8 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/ijoywan/laravel-echo-server/express"
-	"github.com/ijoywan/laravel-echo-server/options"
+	"github.com/ijoywan/laravel-echo-server-4-golang/express"
+	"github.com/ijoywan/laravel-echo-server-4-golang/options"
 	"github.com/zishang520/engine.io/types"
 	"github.com/zishang520/engine.io/utils"
 	"github.com/zishang520/socket.io/socket"

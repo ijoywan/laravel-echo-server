@@ -9,9 +9,9 @@ import (
 	"net/url"
 	"strings"
 
-	_http "github.com/ijoywan/laravel-echo-server/http"
-	"github.com/ijoywan/laravel-echo-server/options"
-	"github.com/ijoywan/laravel-echo-server/types"
+	_http "github.com/ijoywan/laravel-echo-server-4-golang/http"
+	"github.com/ijoywan/laravel-echo-server-4-golang/options"
+	"github.com/ijoywan/laravel-echo-server-4-golang/types"
 	"github.com/zishang520/engine.io/utils"
 	"github.com/zishang520/socket.io/socket"
 )

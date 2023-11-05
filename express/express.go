@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/ijoywan/laravel-echo-server/options"
+	"github.com/ijoywan/laravel-echo-server-4-golang/options"
 	"github.com/julienschmidt/httprouter"
 	"github.com/zishang520/engine.io/types"
 )

@@ -14,11 +14,11 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/ijoywan/laravel-echo-server/echo"
-	"github.com/ijoywan/laravel-echo-server/options"
-	"github.com/ijoywan/laravel-echo-server/std"
-	"github.com/ijoywan/laravel-echo-server/types"
-	_utils "github.com/ijoywan/laravel-echo-server/utils"
+	"github.com/ijoywan/laravel-echo-server-4-golang/echo"
+	"github.com/ijoywan/laravel-echo-server-4-golang/options"
+	"github.com/ijoywan/laravel-echo-server-4-golang/std"
+	"github.com/ijoywan/laravel-echo-server-4-golang/types"
+	_utils "github.com/ijoywan/laravel-echo-server-4-golang/utils"
 	"github.com/joho/godotenv"
 	"github.com/zishang520/engine.io/utils"
 )

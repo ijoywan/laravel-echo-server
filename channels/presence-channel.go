@@ -3,9 +3,9 @@ package channels
 import (
 	"encoding/json"
 
-	"github.com/ijoywan/laravel-echo-server/database"
-	"github.com/ijoywan/laravel-echo-server/options"
-	"github.com/ijoywan/laravel-echo-server/types"
+	"github.com/ijoywan/laravel-echo-server-4-golang/database"
+	"github.com/ijoywan/laravel-echo-server-4-golang/options"
+	"github.com/ijoywan/laravel-echo-server-4-golang/types"
 	"github.com/zishang520/engine.io/utils"
 	"github.com/zishang520/socket.io/socket"
 )

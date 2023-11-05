@@ -8,8 +8,8 @@ import (
 	"strings"
 
 	"github.com/go-redis/redis/v8"
-	"github.com/ijoywan/laravel-echo-server/options"
-	"github.com/ijoywan/laravel-echo-server/types"
+	"github.com/ijoywan/laravel-echo-server-4-golang/options"
+	"github.com/ijoywan/laravel-echo-server-4-golang/types"
 	"github.com/zishang520/engine.io/utils"
 )
 

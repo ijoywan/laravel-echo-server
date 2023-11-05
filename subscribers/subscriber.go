@@ -1,7 +1,7 @@
 package subscribers
 
 import (
-	"github.com/ijoywan/laravel-echo-server/types"
+	"github.com/ijoywan/laravel-echo-server-4-golang/types"
 )
 
 type Broadcast func(string, *types.Data)

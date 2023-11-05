@@ -1,4 +1,4 @@
-module github.com/ijoywan/laravel-echo-server
+module github.com/ijoywan/laravel-echo-server-4-golang
 
 go 1.21
 

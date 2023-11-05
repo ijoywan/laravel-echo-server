@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/ijoywan/laravel-echo-server/cli"
+	"github.com/ijoywan/laravel-echo-server-4-golang/cli"
 	"github.com/zishang520/engine.io/utils"
 )
 

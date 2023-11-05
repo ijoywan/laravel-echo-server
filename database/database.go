@@ -3,7 +3,7 @@ package database
 import (
 	"errors"
 
-	"github.com/ijoywan/laravel-echo-server/options"
+	"github.com/ijoywan/laravel-echo-server-4-golang/options"
 )
 
 // Create a new database instance.

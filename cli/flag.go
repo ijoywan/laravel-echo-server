@@ -7,7 +7,7 @@ import (
 	"os/exec"
 	"path/filepath"
 
-	"github.com/ijoywan/laravel-echo-server/utils"
+	"github.com/ijoywan/laravel-echo-server-4-golang/utils"
 )
 
 // const usage1 string = `Usage: laravel-echo-server [OPTIONS] <local port or address>

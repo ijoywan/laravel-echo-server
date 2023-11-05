@@ -7,8 +7,8 @@ import (
 	"path"
 	"path/filepath"
 
-	"github.com/ijoywan/laravel-echo-server/options"
-	"github.com/ijoywan/laravel-echo-server/utils"
+	"github.com/ijoywan/laravel-echo-server-4-golang/options"
+	"github.com/ijoywan/laravel-echo-server-4-golang/utils"
 	_ "github.com/mattn/go-sqlite3"
 )
 

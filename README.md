@@ -1,6 +1,6 @@
-# Laravel Echo Server
+# Laravel Echo Server for golang
 
-[![GoDoc](https://pkg.go.dev/badge/github.com/ijoywan/laravel-echo-server?utm_source=godoc)](https://pkg.go.dev/github.com/ijoywan/laravel-echo-server)
+[![GoDoc](https://pkg.go.dev/badge/github.com/ijoywan/laravel-echo-server-4-golang?utm_source=godoc)](https://pkg.go.dev/github.com/ijoywan/laravel-echo-server-4-golang)
 
 Golang server for Laravel Echo broadcasting with [Socket.io for golang](https://github.com/zishang520/socket.io).
 
@@ -8,8 +8,8 @@ Golang server for Laravel Echo broadcasting with [Socket.io for golang](https://
 
 The following are required to function properly.
 
-*   Laravel 5.3+
-*   Redis 3+
+*   Laravel 10+
+*   Redis 7+
 
 Additional information on broadcasting with Laravel can be found on the
 official docs: <https://laravel.com/docs/master/broadcasting>
@@ -19,10 +19,13 @@ official docs: <https://laravel.com/docs/master/broadcasting>
 Compile with the following command:
 
 ``` shell
-$   git clone https://github.com/ijoywan/laravel-echo-server.git
-$   cd laravel-echo-server/
+$   git clone https://github.com/ijoywan/laravel-echo-server-4-golang.git
+$   cd laravel-echo-server-4-golang/
 $   make all
+```
 
+```
+vendor/bin/laravel-echo-server
 ```
 
 ### Initialize with CLI Tool
@@ -95,7 +98,7 @@ Edit the default configuration of the server by adding options to your **laravel
 | `sslKeyPath`       | `''`                 | The path to your server's ssl key |
 | `sslCertChainPath` | `''`                 | The path to your server's ssl certificate chain |
 | `sslPassphrase`    | `''`                 | The pass phrase to use for the certificate (if applicable) |
-| `socketio`         | `{}`                 | Options to pass to the socket.io instance ([available options](https://github.com/ijoywan/laravel-echo-server/blob/master/options/server-options.go)) |
+| `socketio`         | `{}`                 | Options to pass to the socket.io instance ([available options](https://github.com/ijoywan/laravel-echo-server-4-golang/blob/master/options/server-options.go)) |
 | `subscribers`      | `{"http": true, "redis": true}` | Allows to disable subscribers individually. Available subscribers: `http` and `redis` |
 
 ### DotEnv
